@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">	
+	<title> Jeu du Tron </title>
+	<meta name="author" content="Roméo Coquelle et Nathan Niemiec" >
+	<meta name="description" content="Jeu du Tron" >
+	<meta name="keywords" content="tron, SAE" >
+    <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
+    <script src="./script.js"></script>
+</head>
+<body>
+	<h1 id="titre">Tron</h1>
+	<div id="page">
+		<div id="gauche">
+			<div id="input">
+			<input type="checkbox" id="regles">Règles du jeu
+			</div>
+			<div id="texteRegles">
+				<p>Chaque joueur contrôle une “moto lumière” qui laisse une trace derrière elle.</p>
+				<p>L’objectif est de survivre le plus longtemps possible en évitant de toucher les murs ou les traces (les siennes ou celles des autres joueurs).</p>
+				<p>Les déplacements se font sur une grille et uniquement dans 4 directions : haut, bas, gauche, droite.</p>
+				<p>On peut aussi sauter 1 fois par manche pour éviter l'adversaire.</p>
+				<p>Si un joueur touche un mur ou une trace, il est éliminé.</p>
+				<p>Les joueurs peuvent piéger leurs adversaires avec des virages serrés ou les forcer à se coincer dans un coin.</p>
+				<p>Le jeu peut se jouer à 2 joueurs</p>
+				<p>Des points sont attribués pour chaque élimination.</p>
+			</div>
+		</div>
+		<canvas id="canvas" width="800" height="590">
+			Votre navigateur ne prend pas en charge la balise canvas.
+		</canvas>
+		<div id="droite">
+			<div id="actions">
+				<input type="submit" id="commencer" value="Commencer la partie">
+				<input type="submit" id="touches" value="Changer les touches">
+			</div>
+			<div id="scores">
+				<p id="j1"></p>
+				<p id="score">0 - 0</p>
+				<p id="j2"></p>
+				<p id="victoire"></p>
+			</div>
+		</div>
+	
+		<div id="overlay">
+			<div id="popup">
+				<span class="croix" onclick="fermer('overlay')">&times;</span>
+				<h3>Entrez les noms des joueurs :</h3>
+				<form id="form">
+				<input type="text" id="nom_j1" maxlength="10" placeholder="Nom joueur 1"><br><br>
+				<input type="text" id="nom_j2" maxlength="10" placeholder="Nom joueur 2"><br><br>
+				<button type="submit">Jouer !</button>
+				<p id= "incorrect"></p>
+				</form>
+			</div>
+		</div>
+
+		<div id="overlay_touches">
+			<div id="popup_touches">
+				<span class="croix" onclick="fermer('overlay_touches')">&times;</span>
+				<h3>Tapez les touches :</h3>
+				<form id="form_touches">
+					<div id="choix_touches">
+						<div>
+							<h3>Joueur 1</h3>
+							<label for="gauche_j1">Gauche</label>
+							<input type="text" id="gauche_j1" maxlength="1" size="1" value="Q"><br><br>
+							<label for="bas_j1">Bas</label>
+							<input type="text" id="bas_j1" maxlength="1" size="1" value="W"><br><br>
+							<label for="droite_j1">Droite</label>
+							<input type="text" id="droite_j1" maxlength="1" size="1" value="D"><br><br>
+							<label for="haut_j1">Haut</label>
+							<input type="text" id="haut_j1" maxlength="1" size="1" value="Z"><br><br>
+							<label for="saut_j1">Saut</label>
+							<input type="text" id="saut_j1" maxlength="1" size="1" value="S"><br><br>
+						</div>
+						<div>
+							<h3>Joueur 2</h3>
+							<label for="gauche_j2">Gauche</label>
+							<input type="text" id="gauche_j2" maxlength="1" size="1" value="K"><br><br>
+							<label for="bas_j2">Bas</label>
+							<input type="text" id="bas_j2" maxlength="1" size="1" value=";"><br><br>
+							<label for="droite_j2">Droite</label>
+							<input type="text" id="droite_j2" maxlength="1" size="1" value="M"><br><br>
+							<label for="haut_j2">Haut</label>
+							<input type="text" id="haut_j2" maxlength="1" size="1" value="O"><br><br>
+							<label for="saut_j2">Saut</label>
+							<input type="text" id="saut_j2" maxlength="1" size="1" value="L"><br><br>
+						</div>
+					</div>
+				<button type="submit">Valider</button>
+				<p id="invalides"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
