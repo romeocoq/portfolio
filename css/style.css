@@ -38,7 +38,8 @@ html,body{
     justify-content: space-between;
     align-items: center;
     z-index: 3000;
-    overflow: hidden;    
+    overflow: hidden; 
+    position: relative;   
 }
 
 #topbar-text {
@@ -87,9 +88,11 @@ html,body{
 }
 
 #mode {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 #btnmode {
@@ -359,7 +362,11 @@ footer {
         padding-bottom: 15px;
     }
 
-    
+    #mode{
+        left: 65%;
+        transform: translateX(-20%);
+    }
+
     .switch {
         width: 50px;
         height: 25px;
