@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     font-size: 105%;
     margin:0;
+    padding-top: 60px;
 }
 
 body > *:not(footer) {
@@ -38,8 +39,7 @@ html,body{
     justify-content: space-between;
     align-items: center;
     z-index: 3000;
-    overflow: hidden; 
-    position: relative;   
+    overflow: hidden;   
 }
 
 #topbar-text {
@@ -334,6 +334,11 @@ h2{
     opacity: 0.7;
     text-align: center;
     margin-top: 5px;
+}
+
+#btncontact{
+    display: flex;
+    justify-content: center;
 }
 
 footer {

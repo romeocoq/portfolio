@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Me Contacter - Roméo Coquelle</title>
+        <meta name="author" content="Roméo Coquelle" >
+        <meta name="description" content="Page de contact de Roméo Coquelle, étudiant en informatique, provenant de son portfolio." >
+        <meta name="keywords" content="Portfolio, Coquelle, informatique, contact" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://romeocoq.github.io/portfolio/">
+        <meta property="og:title" content="Roméo Coquelle - Étudiant en Informatique">
+        <meta property="og:description" content="Contacter Roméo Coquelle, étudiant en L3 Informatique. Découvrez mes projets, mes compétences en programmation et développement et mes expériences professionnelles.">
+        <meta property="og:image" content="https://romeocoq.github.io/portfolio/img/preview2.jpg">
+
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://romeocoq.github.io/portfolio/">
+        <meta property="twitter:title" content="Roméo Coquelle - Étudiant en Informatique">
+        <meta property="twitter:description" content="Contacter Roméo Coquelle, étudiant en L3 Informatique. Découvrez mes projets, mes compétences en programmation et développement et mes expériences professionnelles.">
+        <meta property="twitter:image" content="https://romeocoq.github.io/portfolio/img/preview2.jpg">
+
+        <meta name="theme-color" content="#163853">
+
+        <link rel="icon" type="image/png" href="./img/icon.jpg">
+        <link rel="apple-touch-icon" href="./img/icon.jpg">
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style-contact.css">
+        <link rel="stylesheet" href="./css/light.css" id="light">
+        <link rel="stylesheet" href="./css/dark.css" id="dark" disabled>
+
+        <script src="./js/commun.js"></script>
+    </head>
+    <body>
+        <div id="topbar">
+            <span id="topbar-text"><a href="index.html#accueil" style="color:white; text-decoration:none;">Étudiant en informatique</a></span>
+            <span id="mode">
+                <input type="checkbox" id="btnmode" name="btnmode">
+                <label for="btnmode" class="switch">
+                    <span class="slider"></span>
+                </label>
+            </span>
+            <span id="symbole">☰</span>
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li><a href="index.html#accueil">Accueil</a></li>
+                <li><a href="index.html#moi">Présentation</a></li>
+                <li><a href="index.html#compétences">Compétences</a></li>
+                <li><a href="index.html#projets">Projets</a></li>
+                <li><a href="index.html#formations">Formations</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="./cv.html">CV</a></li>
+            </ul>
+        </div>
+        
+        <section id="formulaire">
+            <form action="https://formspree.io/f/xdenozzv" method="POST" enctype="multipart/form-data">
+            
+            <label for="email">E-mail *</label>
+            <input type="email" name="email" id="email" placeholder="exemple@mail.fr" required>
+
+            <label for="message">Message *</label>
+            <textarea name="message" id="message" placeholder="Veuillez entrer votre message..." required></textarea>
+            
+            <div id="telfich">
+                <div class="champ-groupe">
+                    <label for="telephone">Téléphone (optionnel)</label>
+                    <input type="tel" name="telephone" id="telephone">
+                </div>
+
+                <div class="champ-groupe">
+                    <label for="fichier">Joindre un fichier (optionnel)</label>
+                    <input type="file" name="attachment" id="fichier">
+                </div>
+            </div>
+
+            <button type="submit" id="btncontact">Envoyer</button>
+            </form>
+        </section>
+
+        <footer>
+            <div id="div-liens">
+                <a href="https://www.linkedin.com/in/romeo-coquelle/" target="_blank"><img class="img-liens" src="./img/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+            </div>
+            <p>© 2026 - Roméo</p>
+            <p>Étudiant en informatique</p>
+        </footer>
+
+    </body>
+</html>
+
