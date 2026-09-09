@@ -52,7 +52,7 @@ h1, h2, h3 {
     background-color: #163853;
 }
 
-.img-langage span {
+.img-langage span , .img-certification span{
     color: #b0b3b8;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -78,6 +78,31 @@ footer {
 
 a {
     color: #ffffff;
+}
+
+.flip-card-front {
+    background-color: #242b34;
+    border: 2px solid #4a9eff;
+}
+
+.flip-card-back {
+    background-color: #4a9eff;
+    color: #ffffff;
+}
+
+.learning-list li {
+    background-color: #242b34;
+    color: #e4e6eb;
+    border: 1px solid #4a9eff;
+}
+
+.apprentissage li {
+    background-color: #242b34;
+    color: #e4e6eb;
+    border: 1px solid #4a9eff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {

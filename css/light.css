@@ -52,7 +52,7 @@ h1, h2, h3 {
     background-color: #3b82f6;
 }
 
-.img-langage span {
+.img-langage span, .img-certification span {
     color: white;
     background: rgba(0,0,0,0.4);
 }
@@ -78,6 +78,31 @@ footer {
 
 a {
     color: #163853;
+}
+
+.flip-card-front {
+    background-color: #ffffff;
+    border: 2px solid #163853;
+}
+
+.flip-card-back {
+    background-color: #163853;
+    color: #ffffff;
+}
+
+.learning-list li {
+    background-color: #ffffff;
+    color: #545454;
+    border: 1px solid #163853;
+}
+
+.apprentissage li {
+    background-color: #ffffff;
+    color: #545454;
+    border: 1px solid #163853;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {

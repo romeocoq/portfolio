@@ -82,63 +82,89 @@
 
         <section id="compétences">
             <h2>Mes Compétences</h2>
-            <ul>
-                <li>Informatique & programmation
-                    <ul>
-                        <li>Algorithmique</li>
-                        <li>Programmation</li>
-                        <li>Structures de données (bases)</li>
-                        <li>Réseaux</li>
-                    </ul>
-                </li>
-                <li>Outils
-                    <ul>
-                        <li>Git / GitHub</li>
-                        <li>Environnement Linux / Windows</li>
-                    </ul>
-                </li>
-                <li>Développement
-                    <ul id="dev">
-                        <li class="langage">
-                            <div class="img-langage" style="background-image: url('./img/html.png');">
-                                <span>HTML</span>
-                            </div>
-                        </li>
-                        <li class="langage">
-                            <div class="img-langage" style="background-image: url('./img/css.png');">
-                                <span>CSS</span>
-                            </div>
-                        </li>
-                        <li class="langage">
-                            <div class="img-langage" style="background-image: url('./img/javascript.png');">
-                                <span>Javascript</span>
-                            </div>
-                        </li>
-                        <li class="langage">
-                            <div class="img-langage" style="background-image: url('./img/python.png');">
-                                <span>Python</span>
-                            </div>
-                        </li>
-                        <li class="langage">
-                            <div class="img-langage" style="background-image: url('./img/c.png');">
-                                <span>C</span>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li>Certifications
-                    <ul>
-                        <li>Certification de Cambridge (anglais) niveau B1</li>
-                    </ul>
-                </li>
-                <li>En cours d’apprentissage
-                    <ul>
-                        <li>Programmation avancée</li>
-                        <li>Développement web avancé</li>
-                        <li>Autres langages(Java, SQL)</li>
-                    </ul>
-                </li>
-            </ul>
+            
+            <div class="cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Informatique & programmation</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li>Algorithmique</li>
+                                <li>Programmation</li>
+                                <li>Structures de données (bases)</li>
+                                <li>Réseaux</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Outils</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li>Git / GitHub</li>
+                                <li>Environnement Linux / Windows</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="compétence-cont">
+                <h3>Développement</h3>
+                <ul id="dev">
+                    <li class="langage">
+                        <div class="img-langage" style="background-image: url('./img/html.png');">
+                            <span>HTML</span>
+                        </div>
+                    </li>
+                    <li class="langage">
+                        <div class="img-langage" style="background-image: url('./img/css.png');">
+                            <span>CSS</span>
+                        </div>
+                    </li>
+                    <li class="langage">
+                        <div class="img-langage" style="background-image: url('./img/javascript.png');">
+                            <span>Javascript</span>
+                        </div>
+                    </li>
+                    <li class="langage">
+                        <div class="img-langage" style="background-image: url('./img/python.png');">
+                            <span>Python</span>
+                        </div>
+                    </li>
+                    <li class="langage">
+                        <div class="img-langage" style="background-image: url('./img/c.png');">
+                            <span>C</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="compétence-cont">
+                <h3>Certifications</h3>
+                <ul id="certification">
+                    <li class="li_certification">
+                        <div class="img-certification" style="background-image: url('./img/cambridge.png');">
+                            <span>Certification de Cambridge (anglais) niveau B1</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="compétence-cont">
+                <h3>En cours d’apprentissage</h3>
+                <ul class="apprentissage">
+                    <li>Programmation avancée</li>
+                    <li>Développement web avancé</li>
+                    <li>Autres langages (C++, Shell, PHP)</li>
+                </ul>
+            </div>
         </section>
 
         <section id="projets">
