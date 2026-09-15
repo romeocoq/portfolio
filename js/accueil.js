@@ -17,16 +17,21 @@ document.addEventListener("DOMContentLoaded", function() {
             return proj.offsetWidth + marginLeft + marginRight;
         }
 
-        btnSuiv.addEventListener('click', function() {
-            if (index < projets.length - 1) { index++; }
+        function updateCarrousel() {
             var projectWidth = getProjectWidth();
             conteneur.style.transform = `translateX(-${index * projectWidth}px)`;
+        }
+
+        btnSuiv.addEventListener('click', function() {
+            if (index < projets.length - 1) { index++; }
+            else {index = 0;}
+            updateCarrousel();
         });
 
         btnPrec.addEventListener('click', function() {
             if (index > 0) { index--; }
-            var projectWidth = getProjectWidth();
-            conteneur.style.transform = `translateX(-${index * projectWidth}px)`;
+            else{index = projets.length - 1;}
+            updateCarrousel();
         });
     }
 
