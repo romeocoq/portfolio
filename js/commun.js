@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if(currentUrl.includes("#")){
         let currentUrl = currentUrl.split('#')[0];
-        window.history.replaceState({}, document.title, cleanUrl);
+        window.history.replaceState({}, document.title, currentUrl);
     }
 
     function actualiserFond() {
