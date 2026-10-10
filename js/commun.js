@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+    function actualiserFond() {
+        const hauteurFenetre = window.innerHeight;
+        const progression = Math.min(window.scrollY / (hauteurFenetre*3), 1);
+        const opacite = 1 - progression;
+        document.body.style.setProperty("--fond-opacity", opacite);
+    }
 
     var symb_menu = document.getElementById("symbole");
     var menu = document.getElementById("menu");
@@ -6,6 +12,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var styleLight = document.getElementById("light");
     var styleDark = document.getElementById("dark");
+
+    // Fonction pour appliquer le thème
+    function appliquerTheme(isDark) {
+        if (isDark) {
+            if (styleDark) styleDark.disabled = false;
+            if (styleLight) styleLight.disabled = true;
+            if (btnmode) btnmode.checked = true;
+            localStorage.setItem('theme', 'dark');
+        } else {
+            if (styleDark) styleDark.disabled = true;
+            if (styleLight) styleLight.disabled = false;
+            if (btnmode) btnmode.checked = false;
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Charger le thème sauvegardé dès l'ouverture de n'importe quelle page
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        appliquerTheme(true);
+    } else {
+        appliquerTheme(false);
+    }
+
+    // Gestion du clic sur le bouton mode
+    if (btnmode) {
+        btnmode.addEventListener('change', function() {
+            document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+            appliquerTheme(this.checked);
+        });
+    }
 
     // Gestion de l'ouverture/fermeture du menu mobile
     if (symb_menu && menu) {
@@ -20,13 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Gestion du basculement Mode Sombre / Mode Clair
-    if (btnmode && styleDark && styleLight) {
-        btnmode.addEventListener('click', function() {
-            document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
-            styleDark.disabled = !styleDark.disabled;
-            styleLight.disabled = !styleLight.disabled;
-        });
-    }
-
+    window.addEventListener("scroll", actualiserFond, {passive: true});
+    window.addEventListener("resize", actualiserFond);
+    actualiserFond();
 });

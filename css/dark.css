@@ -1,47 +1,83 @@
 body {
-    background-color: #0f1419;
-    color: #e4e6eb;
+    background-color: #071a30;
+    color: #e6edf7;
+    position: relative;
+    isolation: isolate;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 35%,
+            rgba(36, 133, 200, 0.45) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 85% 75%,
+            rgba(20, 105, 165, 0.35) 0%,
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #071a30 0%,
+            #102f50 50%,
+            #071b33 100%
+        );
+
+    opacity: var(--fond-opacity, 1);
+}
+
+
+
 #topbar {
-    background-color: #1a2332;
-    color: #b0b3b8;   
+    background-color: #163853;
+    color: white;   
 }
 
 #menu {
     background-color: #1c4465;
-    color: #b0b3b8;
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #menu a{
-    color:#b0b3b8;
+    color:white;
 }
 
 #menu a:hover{
-    background-color: #6bb3ff;
-    border: 5px solid #6bb3ff;
+    background-color: #3b82f6;
+    border: 5px solid #3b82f6;
 }
 
+
 section {
-    background: #1a1f26;
+    color: #e6edf7;
+    border: 1px solid rgba(120, 180, 230, 0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px);
 }
 
 #photoPres{
-    border: solid 5px #4a9eff;
+    border: solid 5px #163853;
 }
 
 h1, h2, h3 {
-    color: #ffffff;
+    color: #6bb3ff;
 }
 
 .btn {
-    background-color: #4a9eff;
-    color: #ffffff;
+    background-color: #163853;
+    color: white;
 }
 
 .btn:hover {
-    background-color: #163853;
+    background-color: #3b82f6;
 }
 
 #cv{
@@ -49,16 +85,17 @@ h1, h2, h3 {
 }
 
 #cv:hover{
-    background-color: #163853;
+    background-color: #3b82f6;
 }
 
-.img-langage span , .img-certification span{
-    color: #b0b3b8;
-    background: rgba(0, 0, 0, 0.1);
+.img-langage span, .img-certification span {
+    color: white;
+    background: rgba(0,0,0,0.2);
+    border: 3px inset #3b82f6;
 }
 
 .proj {
-    background: #242b34;
+    background: #163853;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -68,47 +105,35 @@ h1, h2, h3 {
 }
 
 .lien-maps{
-    color: #e4e6eb;
-}
-
-footer {
-    background-color: #4a9eff;
-    color: #ffffff;
+    color: #3b82f6;
 }
 
 a {
-    color: #ffffff;
+    color: #3b82f6;
+    text-decoration: none;
 }
 
 .flip-card-front {
-    background-color: #242b34;
-    border: 2px solid #4a9eff;
+    background-color: #163853;
+    border: 2px solid #3b82f6;
 }
 
 .flip-card-back {
-    background-color: #4a9eff;
+    background-color: #163853;
     color: #ffffff;
 }
 
 .learning-list li {
-    background-color: #242b34;
-    color: #e4e6eb;
-    border: 1px solid #4a9eff;
+    background-color: #ffffff;
+    color: #545454;
+    border: 1px solid #163853;
 }
 
 .apprentissage li {
-    background-color: #242b34;
-    color: #e4e6eb;
-    border: 1px solid #4a9eff;
+    background-color: transparent;
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.9rem;
-}
-
-@media (max-width: 600px) {
-
-    section {
-        background-color: #1a1f26;
-    }
-    
 }

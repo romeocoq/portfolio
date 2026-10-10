@@ -211,8 +211,6 @@ h2{
     font-weight: bold;
 }
 
-/* --- SECTION COMPÉTENCES --- */
-
 .cards-grid {
     display: flex;
     flex-wrap: wrap;
@@ -220,8 +218,6 @@ h2{
     justify-content: center;
     margin-bottom: 30px;
 }
-
-/* --- CARTES COMPÉTENCES RETOURNABLES --- */
 
 .cards-grid {
     display: flex;
@@ -269,14 +265,12 @@ h2{
     overflow: hidden;
 }
 
-/* Face avant : Titre centré */
 .flip-card-front h3 {
     margin: 0;
     font-size: 1.15rem;
     text-align: center;
 }
 
-/* Face arrière : Liste uniquement */
 .flip-card-back {
     transform: rotateY(180deg);
 }
@@ -298,7 +292,6 @@ h2{
     margin-bottom: 0;
 }
 
-/* Groupes complémentaires (Développement, Certifications, Apprentissage) */
 .comp-subgroup {
     margin-top: 25px;
     text-align: center;
@@ -365,28 +358,27 @@ h2{
     overflow: hidden;
 }
 
-
 .img-langage::before, .img-certification::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: inherit;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: blur(3px);
-    transform: scale(1.1);
+    display: none; 
 }
 
 .img-langage span, .img-certification span {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-weight: bold;
-    z-index: 1;
+    font-size: 1.1rem;
     text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 #projets{
