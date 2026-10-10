@@ -3,12 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentUrl = window.location.href;
     
     if (currentUrl.includes("index.html")) {
-        let cleanUrl = currentUrl.replace("index.html", "");
-        window.history.replaceState({}, document.title, cleanUrl);
+        currentUrl = currentUrl.replace("index.html", "");
+        window.history.replaceState({}, document.title, currentUrl);
     }
 
     if (currentUrl.endsWith(".html")) {
-        let cleanUrl = currentUrl.slice(0, -5);
+        currentUrl = currentUrl.slice(0, -5);
+        window.history.replaceState({}, document.title, currentUrl);
+    }
+
+    if(currentUrl.includes("#")){
+        let currentUrl = currentUrl.split('#')[0];
         window.history.replaceState({}, document.title, cleanUrl);
     }
 
