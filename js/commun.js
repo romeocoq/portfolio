@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    let currentUrl = window.location.href;
+    
+    if (currentUrl.includes("index.html")) {
+        let cleanUrl = currentUrl.replace("index.html", "");
+        window.history.replaceState({}, document.title, cleanUrl);
+    }
+
+    if (currentUrl.endsWith(".html")) {
+        let cleanUrl = currentUrl.slice(0, -5);
+        window.history.replaceState({}, document.title, cleanUrl);
+    }
+
     function actualiserFond() {
         const hauteurFenetre = window.innerHeight;
         const progression = Math.min(window.scrollY / (hauteurFenetre*3), 1);
