@@ -1,22 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    let currentUrl = window.location.href;
-    
-    if (currentUrl.includes("index.html")) {
-        currentUrl = currentUrl.replace("index.html", "");
-        window.history.replaceState({}, document.title, currentUrl);
-    }
-
-    if (currentUrl.endsWith(".html")) {
-        currentUrl = currentUrl.slice(0, -5);
-        window.history.replaceState({}, document.title, currentUrl);
-    }
-
-    if(currentUrl.includes("#")){
-        let currentUrl = currentUrl.split('#')[0];
-        window.history.replaceState({}, document.title, currentUrl);
-    }
-
     function actualiserFond() {
         const hauteurFenetre = window.innerHeight;
         const progression = Math.min(window.scrollY / (hauteurFenetre*3), 1);
