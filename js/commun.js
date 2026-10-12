@@ -1,5 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    function cleanUrl(){
+        let currentUrl = window.location.href;
+
+        if (currentUrl.includes(".html")) {
+            currentUrl = currentUrl.replace(".html", "");
+        }
+
+        if(currentUrl.includes("index")){
+            currentUrl = currentUrl.replace("index", "");
+        }
+
+        if(currentUrl.includes("#")){
+            currentUrl = currentUrl.split("#")[0];
+        }
+
+        if (window.location.href !== currentUrl) {
+            window.history.replaceState({}, document.title, currentUrl);
+        }
+    }
+
     function actualiserFond() {
         const hauteurFenetre = window.innerHeight;
         const progression = Math.min(window.scrollY / (hauteurFenetre*3), 1);
@@ -61,4 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", actualiserFond, {passive: true});
     window.addEventListener("resize", actualiserFond);
     actualiserFond();
+    cleanUrl();
+    window.addEventListener("hashchange", cleanUrl);
 });
